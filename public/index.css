@@ -12,6 +12,10 @@
     color: var(--white);
   }
 
+  h1 {
+    font-size: 2.75rem;
+  }
+
   html,
   body {
     margin: 0;
@@ -24,6 +28,7 @@
     background-color: var(--dark-color);
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -36,13 +41,13 @@
     width: 100%;
     height: 100%;
     z-index: -2;
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   body::before {
     content: "";
     position: absolute;
-    background-color: rgba(216, 87, 255, 0.8);
+    background-color: rgba(216, 87, 255, 0.6);
     width: 100%;
     height: 100%;
     filter: blur(100px);
@@ -109,5 +114,36 @@
     color: var(--dark-color);
     scale: 1.05;
     transition: all 200ms linear;
+  }
+
+  header button i {
+    color: inherit;
+    margin-left: 0.2rem;
+  }
+
+  header a {
+    margin-top: 2rem;
+  }
+
+  a {
+    font-size: 1.75rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  a:hover {
+    transition: transform 200ms linear;
+    transform: translateY(-2px);
+  }
+
+  footer {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  footer a {
+    font-size: 1.25rem;
+    font-family: monospace;
   }
 }
